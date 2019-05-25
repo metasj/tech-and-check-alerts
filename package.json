@@ -15,7 +15,10 @@
     "build": "babel src -d lib",
     "lint": "./node_modules/.bin/eslint 'src/**/*.js'",
     "test": "",
-    "migrate": "sequelize db:migrate"
+    "migrate": "sequelize db:migrate",
+    "queue:listScheduledJobs": "babel-node -- src/scripts/listScheduledJobs",
+    "queue:scheduleJobs": "babel-node -- src/scripts/scheduleJobs",
+    "queue:unscheduleJobs": "babel-node -- src/scripts/unscheduleJobs"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
